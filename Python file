@@ -1,1 +1,69 @@
+import math
 
+# Function to calculate the area of a rectangle
+def rectangle_area(length, width):
+    return length * width
+
+# Function to calculate the perimeter of a rectangle
+def rectangle_perimeter(length, width):
+    return 2 * (length + width)
+
+# Function to calculate the area of a square
+def square_area(side):
+    return side * side
+
+# Function to calculate the perimeter of a square
+def square_perimeter(side):
+    return 4 * side
+
+# Function to calculate the area of a triangle
+def triangle_area(base, height):
+    return 0.5 * base * height
+
+# Function to calculate the perimeter of a triangle
+def triangle_perimeter(side1, side2, side3):
+    return side1 + side2 + side3
+
+# Function to calculate the area of a circle
+def circle_area(radius):
+    return math.pi * radius**2
+
+# Function to calculate the circumference of a circle
+def circle_circumference(radius):
+    return 2 * math.pi * radius
+
+# Function to calculate the diameter of a circle
+def circle_diameter(radius):
+    return 2 * radius
+
+# Get user input
+shape = input("Enter the shape (rectangle, square, triangle, circle): ").lower()
+
+if shape == "rectangle":
+    length = float(input("Enter the length of the rectangle: "))
+    width = float(input("Enter the width of the rectangle: "))
+    print("Rectangle Area:", rectangle_area(length, width))
+    print("Rectangle Perimeter:", rectangle_perimeter(length, width))
+    
+elif shape == "square":
+    side = float(input("Enter the side length of the square: "))
+    print("Square Area:", square_area(side))
+    print("Square Perimeter:", square_perimeter(side))
+    
+elif shape == "triangle":
+    base = float(input("Enter the base length of the triangle: "))
+    height = float(input("Enter the height of the triangle: "))
+    print("Triangle Area:", triangle_area(base, height))
+    side1 = float(input("Enter the length of side 1: "))
+    side2 = float(input("Enter the length of side 2: "))
+    side3 = float(input("Enter the length of side 3: "))
+    print("Triangle Perimeter:", triangle_perimeter(side1, side2, side3))
+    
+elif shape == "circle":
+    radius = float(input("Enter the radius of the circle: "))
+    print("Circle Area:", circle_area(radius))
+    print("Circle Circumference:", circle_circumference(radius))
+    print("Circle Diameter:", circle_diameter(radius))
+    
+else:
+    print("Invalid shape entered.")
